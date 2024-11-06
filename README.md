@@ -4,151 +4,184 @@
 
 ### 📐 Semana 1 - Definición de Arquitectura y Componentes Clave
 - **Jonathan (CTO, Arquitecto de Software)**:
-  - 🖼️ Diseña el diagrama de arquitectura de microservicios y define la comunicación entre ellos.
-  - 🔍 Especifica los microservicios clave y su flujo de datos.
+  - 🖼️ Diseña el diagrama de arquitectura de microservicios y define la comunicación entre ellos:
+    - Identifica los microservicios clave (Gestión de Casos, CRM, Facturación, Documentos, Seguridad, Notificaciones).
+    - Documenta el flujo de datos entre servicios y cómo interactúan.
+  - 🔍 Especifica los endpoints y métodos de comunicación.
 - **Kony (CEO y Líder de Proyecto)**:
-  - 👥 Colabora en el diseño de flujos de comunicación y define el alcance del proyecto.
-  - 📦 Define la estructura de módulos del frontend desde una perspectiva de negocio y UX.
+  - 👥 Colabora en el diseño de flujos de comunicación y define el alcance del proyecto:
+    - Establece metas y requisitos de cada módulo (Gestión de Casos, CRM, Facturación).
+    - Revisa con Patricio para confirmar que los módulos cumplan con las necesidades legales.
+  - 📦 Define una estructura de módulos en frontend:
+    - Crea una lista de componentes y funcionalidades iniciales en el dashboard y gestión de casos.
 - **David (COO, Responsable de Calidad y DevOps)**:
-  - 📂 Configura el repositorio en GitLab y establece las prácticas de control de versiones.
-  - 🚀 Desarrolla la estructura básica del pipeline de CI/CD.
+  - 📂 Configura el repositorio en GitLab y define prácticas de control de versiones:
+    - Crea el repositorio principal y los submódulos para cada microservicio.
+    - Establece ramas de desarrollo (`main`, `dev`) y define políticas de PRs.
+  - 🚀 Desarrolla el pipeline inicial de CI/CD:
+    - Implementa una prueba inicial de compilación.
+    - Define el esquema de pruebas y validación de código para cada PR.
 - **Patricio (CLO, Chief Legal Officer)**:
-  - ⚖️ Define los requisitos legales esenciales para la gestión de casos y la privacidad de datos.
-  - 📜 Colabora en la especificación de los módulos desde una perspectiva de cumplimiento legal.
+  - ⚖️ Define los requisitos legales esenciales para la gestión de casos y privacidad de datos:
+    - Documenta los permisos de acceso, privacidad de datos y estándares de almacenamiento.
+  - 📜 Revisa los flujos de usuario para asegurar el cumplimiento normativo en el módulo de casos y CRM.
 
 ### ⚙️ Semana 2 - Configuración de Entornos y Estándares Técnicos
 - **Jonathan**:
-  - 🛠️ Define los lenguajes, frameworks, y herramientas para cada microservicio.
-  - 📑 Documenta las APIs y los flujos de datos para cada servicio.
+  - 🛠️ Define los lenguajes y frameworks de cada microservicio:
+    - Selecciona tecnologías como Node.js para APIs y PostgreSQL para la base de datos.
+    - Configura plantillas para cada microservicio en el repositorio.
+  - 📑 Documenta APIs y flujos de datos:
+    - Especifica rutas y métodos de cada endpoint en Swagger.
 - **Kony**:
-  - 🎨 Ayuda a definir un prototipo inicial de la interfaz del frontend.
-  - 📝 Colabora en la documentación de flujos y estructura de navegación.
+  - 🎨 Ayuda a definir el prototipo de la interfaz de usuario:
+    - Establece los estilos iniciales de frontend, incluyendo temas para modo claro/oscuro.
+    - Prepara la estructura de carpetas de frontend y componentes principales.
 - **David**:
-  - 🐋 Configura Docker y `docker-compose` para ejecutar microservicios localmente.
-  - ✅ Implementa pruebas de calidad iniciales en el pipeline de CI/CD.
+  - 🐋 Configura Docker y `docker-compose`:
+    - Prepara un entorno para que cada microservicio pueda ejecutarse de manera independiente.
+    - Verifica que los microservicios se comuniquen correctamente a nivel local.
+  - ✅ Implementa pruebas de calidad iniciales:
+    - Configura `eslint` y `prettier` para mantener la consistencia del código.
+    - Agrega pruebas iniciales unitarias en el pipeline de CI/CD.
 - **Patricio**:
-  - 💼 Asesora sobre la estructura de datos sensibles y privacidad para asegurar cumplimiento.
-  - 📑 Participa en la definición de flujos específicos para el manejo de casos y clientes.
+  - 💼 Asesora sobre la estructura de datos sensibles y privacidad:
+    - Revisa los esquemas de bases de datos para verificar que cumplan con los requisitos legales.
+    - Identifica las prácticas de manejo de datos sensibles en el módulo de gestión de casos.
 
 ---
 
-## 🚀 Semana 3 a Semana 8 - Desarrollo e Integración del MVP
+## 🚀 Semanas 3 a 8 - Desarrollo e Integración del MVP
 
 ### 🔧 Semana 3 - Configuración Inicial del Frontend y Backend Básico
 - **Kony**:
-  - 🖥️ Configura la estructura del frontend, incluyendo el dashboard y el menú de navegación lateral.
-  - 📐 Define los componentes reutilizables para el diseño de pantallas.
+  - 🖥️ Configura la estructura del frontend:
+    - Implementa el layout básico del dashboard y menú de navegación lateral.
+    - Crea los componentes reutilizables para las pantallas (botones, formularios, tablas).
+  - 🌗 Implementa el sistema de modo claro/oscuro:
+    - Crea un tema CSS global con variables para colores y estilos.
+    - Agrega un selector de tema y pruebas de accesibilidad en ambos modos.
 - **Jonathan**:
-  - 🗄️ Configura la base de datos y las estructuras de datos necesarias para gestionar casos y clientes.
-  - 🔗 Implementa las APIs básicas para el módulo de gestión de casos.
+  - 🗄️ Configura la base de datos y estructuras de datos para Gestión de Casos y CRM.
+  - 🔗 Implementa las APIs básicas para gestión de casos:
+    - Desarrolla endpoints CRUD (crear, leer, actualizar, eliminar) para casos legales.
+    - Documenta las APIs en Swagger para que el frontend pueda conectarse.
 - **David**:
-  - 📬 Desarrolla el microservicio de **Notificaciones y Mensajería** con operaciones CRUD básicas.
-  - 🧪 Establece pruebas de integración para verificar la estabilidad del código.
+  - 📬 Desarrolla el microservicio de **Notificaciones y Mensajería**:
+    - Implementa operaciones CRUD para notificaciones.
+    - Configura notificaciones en tiempo real para el frontend usando WebSockets.
+  - 🧪 Establece pruebas de integración iniciales en CI/CD.
 - **Patricio**:
-  - 🔍 Revisa los flujos de gestión de casos y verifica que se ajusten a las prácticas legales.
-  - 🧾 Colabora en la creación de términos y opciones específicas de casos legales.
+  - 🔍 Revisa los flujos de gestión de casos:
+    - Verifica que los datos cumplan con los estándares legales y de privacidad.
+    - Sugiere mejoras en la estructura de datos del módulo de gestión de casos.
 
 ### 🖼️ Semana 4 - Desarrollo de Pantallas de Inicio, Gestión de Casos y Seguridad
 - **Kony**:
-  - 🏠 Implementa el layout del dashboard y la pantalla de inicio, integrando widgets visuales.
-  - 🔄 Establece un sistema de navegación entre módulos.
+  - 🏠 Desarrolla el layout del dashboard con widgets visuales.
+  - 🔄 Configura un sistema de navegación entre módulos (Dashboard, Casos, CRM).
+  - 🌗 Ajusta el modo claro/oscuro en todas las pantallas.
 - **Jonathan**:
-  - 🔒 Desarrolla el sistema de autenticación y roles para usuarios, asegurando el acceso controlado.
+  - 🔒 Implementa autenticación y roles para usuarios:
+    - Crea endpoints de login y registro.
+    - Asigna permisos básicos para que solo usuarios con rol adecuado accedan a cada módulo.
 - **David**:
-  - 🔐 Completa el microservicio de **Notificaciones y Mensajería** con pruebas unitarias.
-  - 📋 Documenta y desarrolla el microservicio de **Seguridad y Autenticación**.
+  - 🔐 Completa el microservicio de **Seguridad y Autenticación**:
+    - Implementa verificación de tokens y middleware de autorización.
+  - 📋 Documenta y refina el pipeline de CI/CD con pruebas de autenticación.
 - **Patricio**:
-  - ⚖️ Verifica que la seguridad y el control de roles estén alineados con la privacidad de datos legales.
-  - 📝 Colabora en el diseño de la interfaz para mejorar la navegación desde el punto de vista del usuario legal.
+  - ⚖️ Verifica la configuración de control de roles para privacidad:
+    - Asegura que los roles y permisos cumplan con la regulación de acceso a datos.
+    - Revisa el manejo de datos personales en el módulo de autenticación.
 
 ### 👥 Semana 5 - Integración de Gestión de Casos y Desarrollo del Módulo CRM
 - **Kony**:
-  - 📊 Desarrolla la interfaz de usuario del módulo de gestión de casos, incluyendo línea de tiempo y tareas asignadas.
-  - ✅ Realiza pruebas iniciales de usabilidad.
+  - 📊 Desarrolla la interfaz de usuario del módulo de gestión de casos.
+  - ✅ Realiza pruebas de usabilidad en el módulo de gestión de casos.
 - **Jonathan**:
-  - 🧪 Realiza pruebas unitarias en las APIs de gestión de casos y optimiza la estructura de datos.
-  - 🔗 Colabora con Kony para integrar los datos de backend en el frontend de gestión de casos.
+  - 🧪 Realiza pruebas unitarias en las APIs de gestión de casos.
+  - 🔗 Colabora con Kony en la integración de backend y frontend en gestión de casos.
 - **David**:
-  - 📑 Completa la funcionalidad del microservicio de **Seguridad y Autenticación**, incluyendo roles avanzados.
-  - 📏 Documenta estándares de calidad de código y métricas de rendimiento.
+  - 📑 Completa el microservicio de **Seguridad y Autenticación**.
+  - 📏 Documenta los estándares de calidad y métricas de rendimiento.
 - **Patricio**:
-  - 🧾 Revisa el CRM para asegurar que las interacciones y datos de clientes cumplan con las normas legales.
-  - 📜 Propone mejoras en la interfaz de cliente y en los perfiles desde la perspectiva de un abogado.
+  - 🧾 Verifica que el CRM cumpla con normas de manejo de datos de clientes.
+  - 📜 Propone mejoras en perfiles de clientes desde una perspectiva legal.
 
 ### 📇 Semana 6 - Desarrollo e Integración del Módulo CRM
 - **Kony**:
-  - 🧩 Desarrolla la interfaz del módulo CRM, incluyendo la visualización de perfiles de clientes.
-  - 🔍 Realiza pruebas de UI y ajusta componentes visuales.
+  - 🧩 Crea la interfaz del CRM y la visualización de perfiles.
+  - 🔍 Realiza pruebas de UI y ajusta la compatibilidad con modo claro/oscuro.
 - **Jonathan**:
-  - 💼 Desarrolla las APIs del módulo CRM para gestionar clientes y su historial de casos.
-  - ✅ Documenta y prueba las APIs para integración con frontend.
+  - 💼 Desarrolla las APIs del módulo CRM.
+  - ✅ Documenta y realiza pruebas de integración de las APIs.
 - **David**:
-  - 🔄 Configura el pipeline de CI/CD para incluir pruebas de seguridad y carga.
-  - 💵 Inicia el desarrollo del microservicio de **Facturación**, creando endpoints básicos.
+  - 🔄 Configura pruebas avanzadas en el pipeline de CI/CD.
+  - 💵 Inicia el desarrollo del microservicio de **Facturación**.
 - **Patricio**:
-  - 🔒 Valida que el manejo de datos de clientes en el CRM cumpla con las normativas legales.
-  - 📝 Asegura que la documentación del cliente se ajuste a las mejores prácticas legales.
+  - 🔒 Revisa la estructura del CRM para cumplimiento normativo.
+  - 📝 Asegura que la documentación del cliente cumpla con buenas prácticas legales.
 
 ### 💼 Semana 7 - Integración de APIs de CRM y Desarrollo de Facturación
 - **Kony**:
-  - 🔗 Conecta el frontend del CRM con el backend y verifica la visualización de datos.
-  - ✨ Refina la UI del CRM y ajusta la usabilidad.
+  - 🔗 Conecta el frontend del CRM con backend.
+  - ✨ Refina la UI del CRM para una mejor experiencia.
 - **Jonathan**:
-  - 🔒 Mejora la seguridad y control de acceso en el backend, asegurando que los datos sensibles estén protegidos.
-  - 🔗 Prueba la conexión entre los microservicios de Gestión de Casos y CRM.
+  - 🔒 Optimiza la seguridad y control de acceso en backend.
+  - 🔗 Prueba la conexión entre CRM y gestión de casos.
 - **David**:
-  - 💳 Completa las funcionalidades principales del microservicio de **Facturación** (creación, actualización y pagos).
-  - 📋 Documenta el plan de migración a GCP y define los pasos para la transición.
+  - 💳 Completa el microservicio de **Facturación**.
+  - 📋 Documenta el plan de migración a GCP.
 - **Patricio**:
-  - 📑 Asegura que la facturación cumpla con los requisitos legales en términos de claridad y transparencia.
-  - 🔍 Revisa las funcionalidades de facturación para verificar que los informes financieros sean adecuados para el sector legal.
+  - 📑 Verifica que la facturación cumpla con los requisitos legales.
+  - 🔍 Revisa informes financieros para el sector legal.
 
 ### 🧪 Semana 8 - Optimización y Pruebas Finales para el MVP
 - **Kony**:
-  - 🧩 Realiza pruebas de usabilidad finales en el frontend y ajusta la interfaz en base a los comentarios.
-  - 📜 Documenta el flujo de usuario y estructura de navegación para futuras mejoras.
+  - 🧩 Realiza pruebas de usabilidad finales en frontend.
+  - 📜 Documenta el flujo de usuario y estructura de navegación.
 - **Jonathan**:
-  - 🧪 Realiza pruebas finales en todos los módulos de backend y asegura que estén listos para el MVP.
-  - 📄 Completa la documentación técnica y prepara el backend para la migración a GCP.
+  - 🧪 Pruebas finales en módulos de backend.
+  - 📄 Completa la documentación técnica para migración a GCP.
 - **David**:
-  - 🔍 Realiza pruebas finales de QA para garantizar que el pipeline funcione sin problemas.
-  - ⚙️ Ejecuta pruebas de carga y optimización en los microservicios, preparando el entorno para el lanzamiento del MVP.
+  - 🔍 Pruebas finales de QA en pipeline.
+  - ⚙️ Ejecuta pruebas de carga y optimización.
 - **Patricio**:
-  - 📜 Revisa el MVP desde la perspectiva de cumplimiento legal y su alineación con los objetivos.
-  - 📝 Colabora en la documentación final para asegurar que el producto sea intuitivo y legalmente sólido.
+  - 📜 Revisa el MVP para asegurar cumplimiento.
+  - 📝 Colabora en la documentación final para asegurar una experiencia intuitiva y legalmente alineada.
 
 ---
 
 ## 📅 Resumen Final por Semana
 
 - **Semanas 1-2 (Paso Cero)**: 
-  - **Objetivo**: Establecer la arquitectura, los entornos de desarrollo y los estándares de calidad iniciales.
-  - **Jonathan** define arquitectura y APIs, **Kony** organiza la estructura de módulos y flujos de navegación, **David** configura el repositorio y pipeline, y **Patricio** define los requisitos legales y revisa la estructura de privacidad de datos.
+  - **Objetivo**: Establecer arquitectura, estándares técnicos y entorno de desarrollo inicial.
+  - **Jonathan** diseña la arquitectura de microservicios, **Kony** estructura los módulos de frontend y establece el prototipo inicial, **David** configura el repositorio, el pipeline y Docker, y **Patricio** asegura el cumplimiento de requisitos legales en los módulos clave.
 
 - **Semana 3**: 
-  - **Objetivo**: Configurar los componentes básicos del frontend y backend, incluyendo estructuras de datos y los primeros microservicios.
-  - **Kony** configura el frontend inicial, **Jonathan** establece la base de datos y APIs para gestión de casos, **David** desarrolla el microservicio de notificaciones y verifica integraciones, y **Patricio** asegura que el flujo de gestión de casos esté en línea con las prácticas legales.
+  - **Objetivo**: Configurar las bases de frontend y backend, incluyendo gestión de casos y notificaciones.
+  - **Kony** implementa la estructura del frontend, **Jonathan** desarrolla APIs para gestión de casos, **David** crea el microservicio de notificaciones y establece pruebas de integración, y **Patricio** revisa los flujos de gestión de casos para cumplimiento legal.
 
 - **Semana 4**:
-  - **Objetivo**: Desarrollar pantallas de inicio y gestión de casos en frontend, y asegurar autenticación y control de acceso.
-  - **Kony** trabaja en el dashboard y navegación, **Jonathan** implementa autenticación y roles, **David** completa el microservicio de seguridad, y **Patricio** verifica el cumplimiento de privacidad y control de acceso.
+  - **Objetivo**: Completar pantallas de inicio y gestión de casos, y asegurar autenticación y control de acceso.
+  - **Kony** desarrolla el dashboard y navegación, ajustando el modo claro/oscuro, **Jonathan** crea la autenticación y roles, **David** completa el microservicio de seguridad, y **Patricio** verifica la privacidad y control de roles.
 
 - **Semana 5**:
-  - **Objetivo**: Integrar la gestión de casos en frontend y comenzar el desarrollo del módulo CRM.
-  - **Kony** desarrolla la interfaz del módulo de gestión de casos, **Jonathan** optimiza y prueba APIs, **David** documenta y optimiza estándares de calidad, y **Patricio** revisa los flujos del CRM para cumplimiento legal.
+  - **Objetivo**: Integrar backend con frontend en gestión de casos y comenzar el desarrollo de CRM.
+  - **Kony** desarrolla la interfaz de gestión de casos, **Jonathan** prueba y optimiza las APIs de casos, **David** documenta estándares de calidad y seguridad, y **Patricio** revisa el CRM para cumplimiento de normas de manejo de datos de clientes.
 
 - **Semana 6**:
-  - **Objetivo**: Finalizar el módulo CRM e integrarlo con backend, asegurando cumplimiento y seguridad.
-  - **Kony** trabaja en la interfaz del CRM, **Jonathan** desarrolla y documenta APIs para CRM, **David** configura el pipeline para pruebas avanzadas y comienza con el microservicio de facturación, y **Patricio** valida el CRM para cumplimiento normativo.
+  - **Objetivo**: Finalizar el desarrollo del CRM y asegurar la integración con el backend.
+  - **Kony** crea la interfaz del CRM y realiza pruebas de UI, **Jonathan** desarrolla y documenta las APIs de CRM, **David** configura pruebas avanzadas en CI/CD e inicia el microservicio de facturación, y **Patricio** valida el CRM para asegurarse de que cumpla con las normativas legales.
 
 - **Semana 7**:
-  - **Objetivo**: Completar la integración de APIs y facturación, y preparar la documentación de migración a GCP.
-  - **Kony** conecta el CRM en frontend, **Jonathan** mejora la seguridad de datos, **David** termina el microservicio de facturación y documenta el plan de migración, y **Patricio** verifica que la facturación cumpla con los requisitos legales.
+  - **Objetivo**: Integrar el CRM con backend y avanzar en facturación, preparando la migración a GCP.
+  - **Kony** refina la UI del CRM, **Jonathan** optimiza la seguridad del backend, **David** completa el microservicio de facturación y documenta el plan de migración a GCP, y **Patricio** verifica que la facturación cumpla con los estándares legales.
 
 - **Semana 8**:
-  - **Objetivo**: Realizar pruebas finales, optimizar, y documentar el MVP para lanzamiento.
-  - **Kony** finaliza la UI/UX y documenta el flujo de usuario, **Jonathan** prueba y documenta los módulos de backend, **David** realiza pruebas finales de QA y optimización, y **Patricio** asegura el cumplimiento y contribuye a la documentación final para el producto.
+  - **Objetivo**: Realizar optimización, pruebas finales, y documentar el MVP para el lanzamiento.
+  - **Kony** completa pruebas de usabilidad y documenta el flujo de usuario, **Jonathan** realiza pruebas finales en backend y documenta para la migración, **David** ejecuta pruebas de carga y revisa QA, y **Patricio** valida el MVP desde una perspectiva legal y colabora en la documentación final.
 
 ---
 
-Con este roadmap, cada miembro del equipo tiene un rol claramente definido, contribuyendo en sus áreas de especialización y colaborando en los aspectos clave para lograr un MVP funcional y legalmente alineado al final de las 8 semanas. 🛠️🚀
+Este roadmap brinda una guía detallada, paso a paso, para lograr el desarrollo del MVP de TideLaw en 8 semanas, con roles claramente definidos para asegurar que el sistema sea funcional, seguro, intuitivo y cumpla con los estándares legales del sector. 🚀💼
