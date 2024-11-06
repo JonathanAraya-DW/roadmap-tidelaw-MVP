@@ -3,13 +3,13 @@
 ## 🛠️ Paso Cero - Planificación y Configuración Inicial (Semanas 1 y 2)
 
 ### 📐 Semana 1 - Definición de Arquitectura y Componentes Clave
-- **Jonathan (CTO)**:
+- **Jonathan (CTO, Arquitecto de Software)**:
   - 🖼️ Diseña el diagrama de arquitectura de microservicios y define la comunicación entre ellos.
   - 🔍 Especifica los microservicios clave y su flujo de datos.
-- **Kony (Frontend y UI/UX)**:
-  - 👥 Colabora en el diseño de flujos de comunicación y experiencia de usuario.
-  - 📦 Define una estructura básica de componentes reutilizables en el frontend.
-- **David (COO, DevOps y QA)**:
+- **Kony (CEO y Líder de Proyecto)**:
+  - 👥 Colabora en el diseño de flujos de comunicación y define el alcance del proyecto.
+  - 📦 Define la estructura de módulos del frontend desde una perspectiva de negocio y UX.
+- **David (COO, Responsable de Calidad y DevOps)**:
   - 📂 Configura el repositorio en GitLab y establece las prácticas de control de versiones.
   - 🚀 Desarrolla la estructura básica del pipeline de CI/CD.
 
@@ -18,8 +18,8 @@
   - 🛠️ Define los lenguajes, frameworks, y herramientas para cada microservicio.
   - 📑 Documenta las APIs y los flujos de datos para cada servicio.
 - **Kony**:
-  - 🎨 Diseña y prepara un prototipo inicial del frontend.
-  - 📝 Colabora en la documentación de la estructura de componentes de UI.
+  - 🎨 Ayuda a definir un prototipo inicial de la interfaz del frontend.
+  - 📝 Colabora en la documentación de flujos y estructura de navegación.
 - **David**:
   - 🐋 Configura Docker y `docker-compose` para ejecutar microservicios localmente.
   - ✅ Implementa pruebas de calidad iniciales en el pipeline de CI/CD.
