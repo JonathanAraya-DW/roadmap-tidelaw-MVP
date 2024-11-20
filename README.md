@@ -84,6 +84,9 @@ Establecer la arquitectura, herramientas y diseño inicial del sistema.
 #### Semana 2:
 - 🔍 Revisar wireframes creados por el equipo de UX/UI:
   - Proporcionar retroalimentación sobre navegación y estructura.
+- Hablar con PJUD
+- Hablar con SII
+- Coordinar con Marcelo el inicio de proyecto.
 
 ---
 
