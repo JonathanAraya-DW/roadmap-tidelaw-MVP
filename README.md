@@ -35,7 +35,7 @@ Establecer la arquitectura, herramientas y diseño inicial del sistema.
   - ORM: Prisma.
   - Base de datos: PostgreSQL.
   - Asegurar que las decisiones sean escalables.
-
+- Invesitgación SONAR
 ---
 
 ### **📋 Javier (CPO)**
@@ -71,6 +71,7 @@ Establecer la arquitectura, herramientas y diseño inicial del sistema.
 - 🚦 Crear pipeline inicial de CI/CD:
   - Implementar eslint y prettier para verificación de estilo de código.
   - Configurar pruebas básicas de construcción (build).
+  - Invesitgación SONAR
 
 ---
 
